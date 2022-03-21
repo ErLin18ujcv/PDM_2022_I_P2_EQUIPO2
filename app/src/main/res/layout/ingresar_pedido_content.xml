@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollFeed"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".pedidos.IngresarPedidos"
+    tools:showIn="@layout/activity_ingresar_pedidos"
+    android:background="@drawable/centre_background"
+    android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/personalDetailsCard"
+        style="@style/centreLocatorCardDesign"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/clienteTxtInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cliente"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Clientes"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerClientes"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtMenusInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Menús"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerMenus"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cantidad"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <EditText
+                    android:id="@+id/cantidadTxt"
+                    style="@style/modifiedEditText"
+                    android:singleLine="true"
+                    android:inputType="numberSigned"
+                    android:layout_gravity="right"
+                    android:layout_width="80dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnAgregarDetalle"
+                android:layout_width="40dp"
+                android:layout_height="31dp"
+                android:layout_gravity="right"
+                android:background="@drawable/centre_button"
+                android:onClick="agregarDetalle"
+                android:src="@drawable/centre_button"
+                android:text="+"
+                android:textColor="@color/whiteTextColor" />
+
+            <ListView
+                android:id="@+id/menusPedidosList"
+                android:layout_width="374dp"
+                android:layout_height="178dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtMeseroInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Mesero"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerMeseros"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Total:"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="4"/>
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:id="@+id/totalPagarTxt"
+                    android:layout_weight="1"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    android:text="120Lps"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/guardarPedidoBtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/centre_button"
+                android:onClick="guardarPedido"
+                android:text="Guardar"
+                android:textColor="@color/whiteTextColor" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>

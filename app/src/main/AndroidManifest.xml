@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.PDM_2022_I_P2_EQUIPO2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Proyecto2F">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pedidos.IngresarPedidos"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".pedidos.PedidosActivity" />
+        <activity android:name=".menus.IngresarMenu" />
+        <activity android:name=".menus.MenusActivity" />
+        <activity android:name=".facturas.IngresarFactura" />
+        <activity android:name=".facturas.FacturasActivity" />
+        <activity android:name=".empleados.RegistrarEmpleado" />
+        <activity android:name=".empleados.ActivityEmpleados" />
+        <activity
+            android:name=".clientes.IngresarCliente"
+            android:label="@string/app_name" />
+        <activity android:name=".clientes.ActivityClientes" />
+        <activity android:name=".MainActivity">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollFeed"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".facturas.IngresarFactura"
+    tools:showIn="@layout/activity_ingresar_factura"
+    android:background="@drawable/centre_background"
+    android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/personalDetailsCard"
+        style="@style/centreLocatorCardDesign"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pedidoTxtInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cliente"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Pedido"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPedidos"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipoPagotxtInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Pago"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Tipo de Pago"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerTipoPago"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tarjetaMontotxtInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Monto Tarjeta"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <EditText
+                    android:id="@+id/montoTarjetaTxt"
+                    style="@style/modifiedEditText"
+                    android:layout_width="100dp"
+                    android:layout_gravity="right"
+                    android:enabled="false"
+                    android:inputType="numberSigned"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtCajeroInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Cajero"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <Spinner
+                    android:id="@+id/spinnerCajeros"
+                    style="@style/modifiedEditText"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/modifiedEditText"
+                android:text="Detalle"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"/>
+
+            <ListView
+                android:id="@+id/listaDetalles"
+                android:layout_width="374dp"
+                android:layout_height="178dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:hintTextColor="@color/primaryTextColor">
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:text="Total:"
+                    android:textColor="@color/primaryTextColor"/>
+
+                <TextView
+                    style="@style/modifiedEditText"
+                    android:id="@+id/totalPagarTxt"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/procesarFactura"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/centre_button"
+                android:onClick="guardarFactura"
+                android:text="Guardar"
+                android:textColor="@color/whiteTextColor" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>
